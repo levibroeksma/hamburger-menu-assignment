@@ -1,0 +1,95 @@
+:root   {
+    --main-bg-color: #D84282;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#menu {
+    position: relative;
+    width: 60px;
+    height: 8px;
+    background-color: var(--main-bg-color);
+    margin: 100px;
+}
+
+#menu::before {
+    content: "";
+    width: 60px;
+    height: 8px;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    bottom: 16px;
+}
+
+#menu::after {
+    content: "";
+    width: 60px;
+    height: 8px;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    top: 16px;
+}
+
+.triangel {
+    width: 0;
+    height: 0;
+    border-right: 50px solid #000;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#talkbubble {
+    width: 200px;
+    height: 120px;
+    background: pink;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#talkbubble::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: block;
+    border-right: 20px solid pink;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    left: -20px;
+    top: calc(50% - 14px);
+}
+
+#gestreepte-link,
+#gestreepte-link:link,
+#gestreepte-link:visited {
+    font-family: 'Helvetica';
+    text-decoration: none;
+    color: #D84282;
+    font-size: 30px;
+}
+
+#gestreepte-link::after {
+    display: block;
+    width: 0%;
+    background-color: #D84282;
+    height: 3px;
+    content: "";
+    max-width: 234px;
+}
+
+#gestreepte-link:hover::after {
+    width: 100%;
+    transition: width .5s ease-in-out;
+}
+
